@@ -1,0 +1,37 @@
+<div class="box--form">
+	<div class="box--title">Add Kingdom</div>
+	<hr/>
+	<div class="box--content">
+		<form action="/" method="POST">
+			<label for="name">Kingdom Name</label>
+			<input type="text" name="name">
+			<label for="king">King</label>
+			<input type="text" name="king">
+			<label for="queen">Queen</label>
+			<input type="text" name="queen">
+			<input type="submit" class="btn" value="Add New Kingdom" method="post">
+		</form>
+	</div>
+</div>
+
+{{#each allKingdoms as |kingdom|}}
+	<div class="box">
+		<a href="/kingdoms/{{kingdom.id}}">
+			<div class="box--title">{{kingdom.name}} kingdom</div>
+			<hr/>
+			<div class="box--left">
+				<span class="label">king:</span> <span class="text">{{kingdom.kingName}}</span>
+			</div>
+			<div class="box--mid">
+				<span class="label">queen:</span> {{kingdom.queenName}}				
+			</div>
+			<div class="box--right">
+				<span class="label">castle count:</span> <span class="text">{{kingdom.castleCount}}</span>
+			</div>
+		</a>
+		<hr/>
+		<form action="/{{kingdom.id}}/remove" method="POST">
+			<input type="submit" class="btn" value="Remove" method="post">			
+		</form>
+	</div>
+{{/each}}

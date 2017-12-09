@@ -1,0 +1,47 @@
+{
+  "3": {
+    "id": 3,
+    "name": "Sir Gawain",
+    "vassalIds": [
+      5,
+      6
+    ]
+  },
+  "4": {
+    "id": 4,
+    "name": "Sir Perivale",
+    "vassalIds": [
+      7,
+      8
+    ]
+  },
+  "5": {
+    "id": 5,
+    "name": "Sir Lionel",
+    "vassalIds": [
+      9,
+      10
+    ]
+  },
+  "6": {
+    "id": 6,
+    "name": "Sir Gareth",
+    "vassalIds": [
+      11,
+      12
+    ]
+  },
+  "7": {
+    "id": 7,
+    "name": "Val",
+    "vassalIds": []
+  },
+  "8": {
+    "id": 8,
+    "name": "Sir Lucan",
+    "vassalIds": [
+      15,
+      16
+    ]
+  }
+}

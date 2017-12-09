@@ -1,0 +1,29 @@
+<div class="box--form">
+	<div class="box--title">Add Castle</div>
+	<hr/>
+	<div class="box--content">
+		<form action="/kingdoms/{{kingdomId}}/castles/add" method="POST">
+			<label for="name">Castle Name</label>
+			<input type="text" name="name">
+			<input type="submit" class="btn" value="Add New Castle" method="POST">
+		</form>
+	</div>
+</div>
+
+<div class="box--header">{{kingdomName}} Kingdom</div>
+
+{{#each allCastles as |castle|}}
+	<div class="box">
+		<a href="/castles/{{castle.id}}">
+			<div class="box--title">castle {{castle.name}}</div>
+			<hr/>
+			<div class="box--left">
+				<span class="label">lieges count:</span><span class="text"> {{castle.liegeIds.length}}</span>
+			</div>
+		</a>
+		<hr/>
+		<form action="/kingdoms/{{../kingdomId}}/castles/{{castle.id}}/remove" method="POST">
+			<input type="submit" class="btn" value="Remove" method="post">			
+		</form>
+	</div>
+{{/each}}
